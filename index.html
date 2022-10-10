@@ -46,7 +46,7 @@
   var presentedIMG = document.getElementById("presentedIMG");
   var presetedHEADER = document.getElementById("presentedTITLE");
  
-  if (deviceagent = "iPhone") 
+  if (deviceagent == "iPhone") 
   {
     deviceType = "Apple iPhone IOS Platform";
     document.getElementById("presentedTITLE").innerHTML = "You are using " + deviceType;
@@ -56,7 +56,7 @@
   
   } 
   
-  else if (deviceagent = "iPad") 
+  else if (deviceagent == "iPad") 
   {
     deviceType = "Apple iPad IOS Platform";
     document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
@@ -66,7 +66,7 @@
   
   } 
   
-  else if (deviceagent = "Linux aarch64") 
+  else if (deviceagent == "Linux aarch64") 
   {
     deviceType = "Android Device";
 
