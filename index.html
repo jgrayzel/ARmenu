@@ -16,23 +16,52 @@
 </head>
 
 <body>
+
+  <script>
+    let agent = navigator.platform;
+  </script>
+
   <main>
     <h1>Demo Restaurant</h1>
     <img src="https://armenu.blob.core.windows.net/images/Restaurant Solid Small.png" alt="Restaurant Logo">
     
     <h2>J & J Bistro</h2>
+
+    <a id="presentedURL" rel="" href=""><img id="presentedIMG" class="image-model" src="" alt="" data-hires-status="pending"</a>
+
     <h3>Click Image below for iPhone/iPad</h3>
-    <a rel="ar" href="https://armenu.blob.core.windows.net/models/chicken2.usdz"><img class="image-model" src="https://armenu.blob.core.windows.net/models/Chicken2Thumb.png" alt="" data-hires-status="pending"></a>
+    <a id="iosurl" rel="ar" href="https://armenu.blob.core.windows.net/models/chicken2.usdz"><img id="iosthumbnail" class="image-model" src="https://armenu.blob.core.windows.net/models/Chicken2Thumb.png" alt="" data-hires-status="pending"></a>
   
     <h3>Click Image below for Android</h3>
-    <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;"><img class="image-model" src="https://armenu.blob.core.windows.net/models/Chicken2Thumb.png">Pretzel</a>
+    <a id="androidurl" href="intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;"><img class="image-model" src="https://armenu.blob.core.windows.net/models/Chicken2Thumb.png">Pretzel</a>
+  
   </main>
 
   <p id="demo"></p>
 
 <script>
-let agent = navigator.platform;
-document.getElementById("demo").innerHTML = "User-agent:<br>" + agent;
+  document.getElementById("demo").innerHTML = "User-agent:<br>" + agent;
+
+  let deviceagent = navigator.platform;
+  var presentedLINE = document.getElementById("presentedURL");
+  var presentedIMG = document.getElementsById("presentedIMG");
+  
+  if (deviceagent = "iPhone") 
+  {
+    deviceType = "Apple iPhone IOS Platform";
+    presentedLINE.rel = "ar";
+    presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
+  
+  } 
+  
+  else if (deviceagent = "Linux aarch64") {
+    deviceType = "Android Device";
+
+  } else {
+    deviceType = "Undefined device type";
+
+  }
 </script>
 
 </body>
