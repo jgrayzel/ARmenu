@@ -27,6 +27,7 @@
     
     <h2>J & J Bistro</h2>
 
+    <h3 id="presentedTITLE"></h3>
     <a id="presentedURL" rel="" href=""><img id="presentedIMG" class="image-model" src="" alt="" data-hires-status="pending"</a>
 
     <h3>Click Image below for iPhone/iPad</h3>
@@ -45,10 +46,12 @@
   let deviceagent = navigator.platform;
   var presentedLINE = document.getElementById("presentedURL");
   var presentedIMG = document.getElementsById("presentedIMG");
-  
+  var presetedHEADER = document.getElementById("presentedTITLE")
+ 
   if (deviceagent = "iPhone") 
   {
     deviceType = "Apple iPhone IOS Platform";
+    document.getElementById("presentedTITLE").innerHTML = "You are using " + deviceType;
     presentedLINE.rel = "ar";
     presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
     presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
@@ -57,7 +60,8 @@
   
   else if (deviceagent = "iPad") 
   {
-    deviceType = "Apple iPhone IOS Platform";
+    deviceType = "Apple iPad IOS Platform";
+    document.getElementById("presentedTITLE").innerHTML = deviceType;
     presentedLINE.rel = "ar";
     presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
     presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
