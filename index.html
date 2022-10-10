@@ -55,10 +55,23 @@
   
   } 
   
-  else if (deviceagent = "Linux aarch64") {
+  else if (deviceagent = "iPad") 
+  {
+    deviceType = "Apple iPhone IOS Platform";
+    presentedLINE.rel = "ar";
+    presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
+  
+  } 
+  
+  else if (deviceagent = "Linux aarch64") 
+  {
     deviceType = "Android Device";
 
-  } else {
+  } 
+  
+  else 
+  {
     deviceType = "Undefined device type";
 
   }
