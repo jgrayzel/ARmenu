@@ -28,12 +28,14 @@
     <h3 id="presentedTITLE">Dynamic Link for device is below:</h3>
     <a id="presentedURL" rel="" href=""><img id="presentedIMG" class="image-model" src="" alt="" data-hires-status="pending"> </a>
 
+    <!--
     <h3>Click Image below for iPhone/iPad</h3>
     <a id="iosurl" rel="ar" href="https://armenu.blob.core.windows.net/models/chicken2.usdz"><img id="iosthumbnail" class="image-model" src="https://armenu.blob.core.windows.net/models/Chicken2Thumb.png" alt="" data-hires-status="pending"></a>
   
     <h3>Click Image below for Android</h3>
     <a id="androidurl" href="intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;"><img class="image-model" src="https://armenu.blob.core.windows.net/models/Chicken2Thumb.png">Pretzel</a>
-  
+    -->
+
   </main>
 
   <p id="demo"></p>
@@ -49,7 +51,7 @@
   if (deviceagent == "iPhone") 
   {
     deviceType = "Apple iPhone IOS Platform";
-    document.getElementById("presentedTITLE").innerHTML = "You are using " + deviceType;
+    document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
     presentedLINE.rel = "ar";
     presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
     presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
@@ -58,7 +60,7 @@
   
   else if (deviceagent == "iPad") 
   {
-    deviceType = "Apple iPad IOS Platform";
+    deviceType = "Apple iPad iPadOS Platform";
     document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
     presentedLINE.rel = "ar";
     presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
@@ -69,6 +71,10 @@
   else if (deviceagent == "Linux aarch64") 
   {
     deviceType = "Android Device";
+    document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
+    presentedLINE.rel = "ar";
+    presentedLINE.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
 
   } 
   
