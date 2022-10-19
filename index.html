@@ -8,24 +8,74 @@
   <title>AR Menu</title>
 
   <style>
+    
     img {
       width: 100%;
       height: auto;
     }
+    
+    body {
+      background-color: lightslategray;
+    }
+
+    table{
+      font-family: arial, sans-serif;
+      
+    }
+   
+
+    th, td {
+     
+      border-radius: 10px;
+      text-align: left;
+      padding: 8px;
+
+    }
+
+    tr{
+      text-align: left;
+    }
+    
     </style>
 </head>
 
 <body>
-
+ 
   <script>
     let agent = navigator.platform;
   </script>
 
   <main>
-    <h1>Demo Restaurant - J & J Bistro</h1>
+   <!-- <h1>Demo Restaurant - J & J Bistro</h1> -->
     <img src="https://armenu.blob.core.windows.net/images/Restaurant Solid Small Cropped.png" alt="Restaurant Logo">
+    <hr>
+    
+    <table style="width:100%;" >
+      <tr>
+        <th style=" border: 1px solid black;  text-align: center;">Appetizers</th>
+        <th style=" border: 1px solid black;  text-align: center;">Entrees</th>
+        <th style=" border: 1px solid black;  text-align: center;">Sides</th>
+        <th style=" border: 1px solid black;  text-align: center;">Drinks</th>
+      </tr>
+    </table>
 
-    <h3 id="presentedTITLE">Dynamic Link for device is below:</h3>
+    <table style="width:100%" >
+    <tr> 
+      <th style="width:25%">Image Link</th>
+      <th style="width:70%">Description</th>
+      <th style="width: 5%">Price</th>
+    </tr>
+
+    <tr>
+      <td><a id="presentedURL" rel="" href=""><img id="presentedIMG" class="image-model" src="" alt="" data-hires-status="pending"> </a></td>
+      <td>Spaghetti and Meatballs Tender juicy meatballs (50% beef, 50% Pork) in a homemade marianara sauce served over a bed of spaghetti</td>
+      <td>$18</td>
+    </tr>
+
+
+    </table>
+    
+    <h4 id="presentedTITLE"></h4>
     <a id="presentedURL" rel="" href=""><img id="presentedIMG" class="image-model" src="" alt="" data-hires-status="pending"> </a>
 
     <!--
@@ -34,7 +84,10 @@
   
     <h3>Click Image below for Android</h3>
     <a id="androidurl" href="intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;"><img class="image-model" src="https://armenu.blob.core.windows.net/models/Chicken2Thumb.png">Pretzel</a>
-    -->
+   
+  document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
+  
+  -->
 
   </main>
 
@@ -51,7 +104,7 @@
   if (deviceagent == "iPhone") 
   {
     deviceType = "Apple iPhone IOS Platform";
-    document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
+    
     presentedLINE.rel = "ar";
     presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
     presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
@@ -61,7 +114,7 @@
   else if (deviceagent == "iPad") 
   {
     deviceType = "Apple iPad iPadOS Platform";
-    document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
+    
     presentedLINE.rel = "ar";
     presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
     presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
@@ -71,7 +124,7 @@
   else if (deviceagent == "Linux aarch64") 
   {
     deviceType = "Android Device";
-    document.getElementById("presentedTITLE").innerHTML = "Your user agent is " + agent + ": " + deviceType;
+    
     presentedLINE.rel = "ar";
     presentedLINE.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
     presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
@@ -81,8 +134,10 @@
   else 
   {
     deviceType = "Undefined device type";
-    document.getElementById("presentedTITLE").innerHTML = "You are viewing this page on an unsupported device type!"
-
+    
+    presentedLINE.rel = "ar";
+    presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
   }
 </script>
 
