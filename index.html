@@ -61,25 +61,60 @@
       </tr>
     </table>
 
+    <h2 style=font-family:arial,sans-serif;>Appetizers</h2>
+    <table style="width:100%;" >
+      <tr style="vertical-align: top; padding-top: 10px;">
+        <td style="width: 30%;" rowspan="2"><a id="presentedURL4" rel="" href=""><img id="presentedIMG4" class="image-model" src="" alt="" data-hires-status="pending"> </a></td>
+        <th style="width: 70%;">Crispy Fries - $9</th>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td>a HUGE tray of crisp Idaho Potato Fries seasoned lightly with cajun spice and served with tangy fry sauce</td>
+      </tr>
+
+      <tr style="vertical-align: top; padding-top: 10px;">
+        <td style="width: 30%;" rowspan="2"><a id="presentedURL5" rel="" href=""><img id="presentedIMG5" class="image-model" src="" alt="" data-hires-status="pending"> </a></td>
+        <th style="width: 70%;">Dinner Salad - $11</th>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td>Fresh romaine lettuce topped with cucumber, cherry tomato halves, and Carrots with your choice of dressing</td>
+      </tr>
+    </table>
+
+
+    <h2 style=font-family:arial,sans-serif;>Entrees</h2>
     <table style="width:100%;" >
     <tr style="vertical-align: top; padding-top: 10px;">
       <td style="width: 30%;" rowspan="2"><a id="presentedURL" rel="" href=""><img id="presentedIMG" class="image-model" src="" alt="" data-hires-status="pending"> </a></td>
       <th style="width: 70%;">Spaghetti & Meatballs - $18</th>
     </tr>
-    <tr>
+    <tr style="vertical-align: top;">
       <td>Tender juicy meatballs (50% beef, 50% Pork) in a homemade marianara sauce served over a bed of spaghetti</td>
     </tr>
  
-    <tr style="vertical-align: top;padding-top: 10px;">
+    <tr style="vertical-align: top;">
       <td style="width: 30%;" rowspan="2"><a id="presentedURL2" rel="" href=""><img id="presentedIMG2" class="image-model" src="" alt="" data-hires-status="pending"> </a></td>
       <th style="width: 70%;">Spicy Chicken Sandwich - $12</th>
     </tr>
-    <tr>
+    <tr style="vertical-align: top;">
       <td>Hand breaded organic chicken breast, dipped in Frank's Red Hot Buffalo Sauce, topped with a slice of sharp cheddar cheese, and served on a brioche sesame bun with a side of seasoned fires</td>
+    </tr>
+
+    <tr style="vertical-align: top;padding-top: 10px;">
+      <td style="width: 30%;" rowspan="2"><a id="presentedURL3" rel="" href=""><img id="presentedIMG3" class="image-model" src="" alt="" data-hires-status="pending"> </a></td>
+      <th style="width: 70%;">4 Cheese Tortellini - $15</th>
+    </tr>
+    <tr>
+      <td>Freshly prepared tortellini filled  with a blend of 4 italian cheeses, and tossed in a flavorful pesto sauce</td>
     </tr>
 
     </table>
     
+    
+
+    <h2 style=font-family:arial,sans-serif;>Sides</h2>
+
+    <h2 style=font-family:arial,sans-serif;>Drinks</h2>
+
     <h4 id="presentedTITLE"></h4>
     <a id="presentedURL" rel="" href=""><img id="presentedIMG" class="image-model" src="" alt="" data-hires-status="pending"> </a>
 
@@ -110,28 +145,67 @@
   var presentedLINE2 = document.getElementById("presentedURL2");
   var presentedIMG2 = document.getElementById("presentedIMG2");
   var presetedHEADER2 = document.getElementById("presentedTITLE2");
+
+  var presentedLINE3 = document.getElementById("presentedURL3");
+  var presentedIMG3 = document.getElementById("presentedIMG3");
+  var presetedHEADER3 = document.getElementById("presentedTITLE3");
+
+  var presentedLINE4 = document.getElementById("presentedURL4");
+  var presentedIMG4 = document.getElementById("presentedIMG4");
+  var presetedHEADER4 = document.getElementById("presentedTITLE4");
+
+  var presentedLINE5 = document.getElementById("presentedURL5");
+  var presentedIMG5 = document.getElementById("presentedIMG5");
+  var presetedHEADER5 = document.getElementById("presentedTITLE5");
  
   if (deviceagent == "iPhone") 
   {
     deviceType = "Apple iPhone IOS Platform";
     
     presentedLINE.rel = "ar";
-    presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
-    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
+    presentedLINE.href = "https://armenu.blob.core.windows.net/models/meatballs.usdz";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/images/Spaghetti.png";
 
     presentedLINE2.rel = "ar";
     presentedLINE2.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
-    presentedIMG2.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
-  
-  } 
+    presentedIMG2.src = "https://armenu.blob.core.windows.net/images/ChickenSando.png";
+
+    presentedLINE3.rel = "ar";
+    presentedLINE3.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG3.src = "https://armenu.blob.core.windows.net/images/Tortellini.png";
+
+    presentedLINE4.rel = "ar";
+    presentedLINE4.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG4.src = "https://armenu.blob.core.windows.net/images/Fries.png";
+
+    presentedLINE5.rel = "ar";
+    presentedLINE5.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG5.src = "https://armenu.blob.core.windows.net/images/Salad.png";
+  }
   
   else if (deviceagent == "iPad") 
   {
     deviceType = "Apple iPad iPadOS Platform";
     
     presentedLINE.rel = "ar";
-    presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
-    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
+    presentedLINE.href = "https://armenu.blob.core.windows.net/models/meatballs.usdz";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/images/Spaghetti.png";
+
+    presentedLINE2.rel = "ar";
+    presentedLINE2.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG2.src = "https://armenu.blob.core.windows.net/images/ChickenSando.png";
+
+    presentedLINE3.rel = "ar";
+    presentedLINE3.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG3.src = "https://armenu.blob.core.windows.net/images/Tortellini.png";
+
+    presentedLINE4.rel = "ar";
+    presentedLINE4.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG4.src = "https://armenu.blob.core.windows.net/images/Fries.png";
+
+    presentedLINE5.rel = "ar";
+    presentedLINE5.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG5.src = "https://armenu.blob.core.windows.net/images/Salad.png";
   
   } 
   
@@ -141,7 +215,23 @@
     
     presentedLINE.rel = "ar";
     presentedLINE.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
-    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/images/Spaghetti.png";
+
+    presentedLINE2.rel = "ar";
+    presentedLINE2.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
+    presentedIMG2.src = "https://armenu.blob.core.windows.net/images/ChickenSando.png";
+
+    presentedLINE3.rel = "ar";
+    presentedLINE3.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
+    presentedIMG3.src = "https://armenu.blob.core.windows.net/images/Tortellini.png";
+
+    presentedLINE4.rel = "ar";
+    presentedLINE4.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
+    presentedIMG4.src = "https://armenu.blob.core.windows.net/images/Fries.png";
+
+    presentedLINE5.rel = "ar";
+    presentedLINE5.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://armenu.blob.core.windows.net/models/pretzel.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;";
+    presentedIMG5.src = "https://armenu.blob.core.windows.net/images/Salad.png";
 
   } 
   
@@ -150,8 +240,24 @@
     deviceType = "Undefined device type";
     
     presentedLINE.rel = "ar";
-    presentedLINE.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
-    presentedIMG.src = "https://armenu.blob.core.windows.net/models/Chicken2Thumb.png";
+    presentedLINE.href = "https://armenu.blob.core.windows.net/models/meatballs.usdz";
+    presentedIMG.src = "https://armenu.blob.core.windows.net/images/Spaghetti.png";
+
+    presentedLINE2.rel = "ar";
+    presentedLINE2.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG2.src = "https://armenu.blob.core.windows.net/images/ChickenSando.png";
+
+    presentedLINE3.rel = "ar";
+    presentedLINE3.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG3.src = "https://armenu.blob.core.windows.net/images/Tortellini.png";
+
+    presentedLINE4.rel = "ar";
+    presentedLINE4.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG4.src = "https://armenu.blob.core.windows.net/images/Fries.png";
+
+    presentedLINE5.rel = "ar";
+    presentedLINE5.href = "https://armenu.blob.core.windows.net/models/chicken2.usdz";
+    presentedIMG5.src = "https://armenu.blob.core.windows.net/images/Salad.png";
   }
 </script>
 
